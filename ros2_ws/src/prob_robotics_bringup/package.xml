@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>prob_robotics_bringup</name>
+  <version>0.1.0</version>
+  <description>Bringup launch and configs for the probabilistic robotics lab.</description>
+  <maintainer email="marco@example.com">marco</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>prob_robotics_filters</exec_depend>
+  <exec_depend>prob_robotics_eval</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

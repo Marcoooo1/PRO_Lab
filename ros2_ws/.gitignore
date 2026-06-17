@@ -1,0 +1,18 @@
+# ROS2 Build-Artefakte
+build/
+install/
+log/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# Windows Artefakte
+*:Zone.Identifier
+
+# Experiment-Daten (lokal bleiben)
+*.csv
+
+# Python Backups
+python_backup/

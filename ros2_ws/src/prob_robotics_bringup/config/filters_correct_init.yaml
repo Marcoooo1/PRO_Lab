@@ -1,0 +1,47 @@
+# Filter-Parameter mit KORREKTER Initialisierung (Baseline)
+# Verwendung: nur fuer den Vergleich gegen den Wrong-Init-Fall.
+
+kf_node:
+  ros__parameters:
+    init_x: 0.0
+    init_y: 0.0
+    init_cov_x: 0.01
+    init_cov_y: 0.01
+    process_noise_q: 0.01
+    measurement_noise_r: 0.05
+    odom_topic: '/odom'
+    output_topic: '/kf/pose'
+    frame_id: 'odom'
+
+ekf_node:
+  ros__parameters:
+    init_x: 0.0
+    init_y: 0.0
+    init_yaw: 0.0
+    init_cov_x: 0.01
+    init_cov_y: 0.01
+    init_cov_yaw: 0.01
+    process_noise_q: 0.01
+    measurement_noise_r: 0.05
+    odom_topic: '/odom'
+    cmd_topic: '/diffdrive_controller/cmd_vel'
+    output_topic: '/ekf/pose'
+    frame_id: 'odom'
+
+pf_node:
+  ros__parameters:
+    init_x: 0.0
+    init_y: 0.0
+    init_yaw: 0.0
+    init_spread_x: 0.1
+    init_spread_y: 0.1
+    init_spread_yaw: 0.05
+    num_particles: 500
+    process_noise_v: 0.1
+    process_noise_w: 0.05
+    measurement_noise_r: 0.2
+    odom_topic: '/odom'
+    cmd_topic: '/diffdrive_controller/cmd_vel'
+    output_topic: '/pf/pose'
+    particles_topic: '/pf/particles'
+    frame_id: 'odom'

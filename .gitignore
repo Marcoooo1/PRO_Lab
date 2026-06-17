@@ -1,0 +1,20 @@
+# ROS2 Build-Artefakte
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# Windows Artefakte
+*:Zone.Identifier
+
+# Experiment-CSV-Rohdaten: generell ignorieren (z.B. /tmp-Reste, Debug-Logs),
+# aber finale Ergebnisse in results/ explizit erlauben
+*.csv
+!results/**/*.csv
+
+# Python Backups (Altlasten)
+python_backup/
